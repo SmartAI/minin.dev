@@ -1,4 +1,118 @@
-baseURL: https://example.org/
+baseURL: https://minai.dev
 languageCode: en-us
-title: My New Hugo Site
+title: My blog
 theme: PaperMod
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Enable pagination with reasonable page size
+paginate: 8
+
+# Improved minification settings
+minify:
+  disableXML: true
+  minifyOutput: true
+  minifyCSS: true
+  minifyJS: true
+
+params:
+  env: production
+  title: My blog
+  description: "Exploring AI, Clang, NLP and LLM Technologies"
+  keywords: [AI, Machine Learning, RAG, NLP, LLM, Programming]
+  author: SmartAI
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+
+  # Enhanced reading experience
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true # Enable code copy buttons
+  ShowShareButtons: true
+  ShowRssButtonInSectionTermList: true
+
+  # Table of Contents settings
+  showtoc: true
+  tocopen: true
+
+  # Improved home page
+  homeInfoParams:
+    Title: "Welcome to My Tech Blog 👋"
+    Content: |
+      Sharing insights about Artificial Intelligence, Machine Learning, and Software Development.
+
+      Here you'll find articles about:
+      - 🤖 AI & Machine Learning
+      - 💻 Programming & Development
+      - 🔍 Natural Language Processing
+      - 🛠️ Technical Tutorials
+
+  # Enhanced social icons
+  socialIcons:
+    - name: x
+      url: "https://x.com/minaidev"
+    - name: github
+      url: "https://github.com/SmartAI"
+    - name: linkedin
+      url: "your-linkedin-url"
+    - name: rss
+      url: "index.xml"
+
+  # Improved assets
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  # Enhanced cover image settings
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: true
+    responsiveImages: true
+
+  # Search optimization
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 3
+    keys: ["title", "permalink", "summary", "content"]
+
+# Improved menu structure
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+
+# Enhanced syntax highlighting
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+    style: dracula
+    codeFences: true
+    guessSyntax: true
+    tabWidth: 4
